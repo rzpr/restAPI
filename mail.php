@@ -1,0 +1,20 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require "vendor/autoload.php";
+$mail = new PHPMailer(true);
+$mail->SMTPDebug = 0;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'yourmail@.com';
+$mail->Password = 'yourpassword';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
+$mail->setFrom('whatever@mail.co', 'mr.nobody');
+$mail->addAddress($_POST['Email'], $_POST['Nama']);
+$mail->isHTML(true);
+$mail->Subject = "Aktivasi pendaftaran Member";
+$mail->Body = "Welcome, Thank You For Register. To Activating Your Account Click Link<a href='http://localhost/activation.php?t=".$token."'>http://localhost/activation.php?t=".$token."</a>  ";
+$mail->send();
+echo 'Message has been sent';
