@@ -55,6 +55,8 @@
                     }else{
                       $insert=mysqli_query($conn,"INSERT INTO users(id_users,username,password,email,no_hp,rapi,apikey,batas,token,aktif,tokenapi,aktifapi)VALUES ('".$api."','".$username."','".$password."','".$email."','".$wa."','".$api."','********','100','".$token."','0','".$tokenapi."','0')");
                       $regapi=mysqli_query($conn,"INSERT INTO api(api)VALUES ('".$api."')");
+                      //include("mail.php");
+
                       if ($insert) {
                         echo '<div class="alert alert-success">
                         Pendaftaran anda berhasil, silahkan cek email anda untuk aktifasi.
