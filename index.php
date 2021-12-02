@@ -110,7 +110,7 @@ $persen=$nilai1/$nilai2*100;
                                                 <button class="close" data-dismiss="alert">
                                                   <span>&times;</span>
                                                 </button>
-                                                Your Api Key Is Locked!<a href=unlock.php?t='.$_SESSION['tokenapi'].'title="Titletext">Click Here</a> To Generate ApiKey
+                                                Your Api Key Is Locked!<a href=unlock.php?t='.$_SESSION['tokenapi'].'>Click Here</a> To Generate ApiKey
                                               </div>
                                             </div>';
                       }
